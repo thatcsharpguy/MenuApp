@@ -36,6 +36,13 @@ namespace MenuApp.Controls
             };
 
             ItemsSource = menus;
+
+
+            var cellTemplate = new DataTemplate(typeof(MenuListItemCell));
+            cellTemplate.SetBinding(TextCell.TextProperty, nameof(MenuListItem.Title));
+            cellTemplate.SetBinding(ImageCell.ImageSourceProperty, nameof(MenuListItem.Icon));
+
+            ItemTemplate = cellTemplate;
         }
     }
 }
