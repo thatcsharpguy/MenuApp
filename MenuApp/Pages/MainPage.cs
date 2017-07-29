@@ -5,13 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace MenuApp
+namespace MenuApp.Pages
 {
-    public partial class MainPage : ContentPage
+    public class MainPage : MasterDetailPage
     {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
     }
 }
