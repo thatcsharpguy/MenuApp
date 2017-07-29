@@ -28,9 +28,13 @@ namespace MenuApp.Pages.Menu
             };
         }
 
-        private async void SideMenuPage_MenuItemSelected(object sender, Controls.MenuListItem e)
+        private void SideMenuPage_MenuItemSelected(object sender, Controls.MenuListItem e)
         {
-            await DisplayAlert(e.Title, "Menu seleccionado", "Aceptar");
+            MenuNavigationPage page;
+            var actualContentPage = (Page)Activator.CreateInstance(e.Page);
+            page = new MenuNavigationPage(actualContentPage);
+            Detail = page;
+            IsPresented = false;
         }
     }
 }
