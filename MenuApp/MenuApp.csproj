@@ -38,6 +38,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MenuListItem.cs" />
     <Compile Include="Pages\EliteFourPage.cs" />
     <Compile Include="Pages\GymsPage.cs" />
     <Compile Include="Pages\MainPage.cs" />
