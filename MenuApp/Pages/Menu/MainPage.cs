@@ -11,7 +11,9 @@ namespace MenuApp.Pages.Menu
     {
         public MainPage()
         {
-            Master = new SideMenuPage();
+            var sideMenuPage = new SideMenuPage();
+            sideMenuPage.MenuItemSelected += SideMenuPage_MenuItemSelected;
+            Master = sideMenuPage;
 
             Detail = new ContentPage
             {
@@ -24,6 +26,11 @@ namespace MenuApp.Pages.Menu
                     }
                 }
             };
+        }
+
+        private async void SideMenuPage_MenuItemSelected(object sender, Controls.MenuListItem e)
+        {
+            await DisplayAlert(e.Title, "Menu seleccionado", "Aceptar");
         }
     }
 }
