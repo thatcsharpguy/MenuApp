@@ -11,7 +11,7 @@ namespace MenuApp.Pages.Menu
     {
         public MainPage()
         {
-            Master = new 
+            Master = new SideMenuPage();
 
             Detail = new ContentPage
             {
