@@ -10,6 +10,9 @@ namespace MenuApp.Pages.Menu
 {
     public class SideMenuPage : ContentPage
     {
+
+        public event EventHandler<MenuListItem> MenuItemSelected;
+
         public SideMenuPage()
         {
             Title = "Pokémon";
@@ -32,11 +35,22 @@ namespace MenuApp.Pages.Menu
             };
 
             var menuList = new MenuListView();
+            menuList.ItemSelected += InternalMenuItemSelected;
 
             containerGrid.Children.Add(titleLabel);
             containerGrid.Children.Add(menuList, 0, 1);
 
             Content = containerGrid;
+        }
+
+        private void InternalMenuItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var menuItem = e.SelectedItem as MenuListItem;
+            if (menuItem != null)
+            {
+                MenuItemSelected?.Invoke(this, menuItem);
+                ((MenuListView) sender).SelectedItem = null;;
+            }
         }
     }
 }
