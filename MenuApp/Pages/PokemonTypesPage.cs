@@ -9,5 +9,9 @@ namespace MenuApp.Pages
 {
     public class PokemonTypesPage : ContentPage
     {
+        public PokemonTypesPage()
+        {
+            Title = "Tipos de pokemon";
+        }
     }
 }

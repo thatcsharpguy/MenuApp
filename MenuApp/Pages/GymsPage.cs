@@ -9,5 +9,9 @@ namespace MenuApp.Pages
 {
     public class GymsPage : ContentPage
     {
+        public GymsPage()
+        {
+            Title = "Gimnasios";
+        }
     }
 }

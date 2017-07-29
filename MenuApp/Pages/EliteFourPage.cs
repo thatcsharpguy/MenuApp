@@ -9,5 +9,9 @@ namespace MenuApp.Pages
 {
     public class EliteFourPage : ContentPage
     {
+        public EliteFourPage()
+        {
+            Title = "Elite 4";
+        }
     }
 }
