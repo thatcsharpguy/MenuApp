@@ -13,7 +13,7 @@ namespace MenuApp
         {
             InitializeComponent();
 
-            MainPage = new MenuApp.Pages.MainPage();
+            MainPage = new MenuApp.Pages.Menu.MainPage();
         }
 
         protected override void OnStart()
