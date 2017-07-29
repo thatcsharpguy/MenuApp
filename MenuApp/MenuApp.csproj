@@ -41,8 +41,8 @@
     <Compile Include="Controls\MenuListItem.cs" />
     <Compile Include="Pages\EliteFourPage.cs" />
     <Compile Include="Pages\GymsPage.cs" />
-    <Compile Include="Pages\MainPage.cs" />
-    <Compile Include="Pages\MenuNavigationPage.cs" />
+    <Compile Include="Pages\Menu\MainPage.cs" />
+    <Compile Include="Pages\Menu\MenuNavigationPage.cs" />
     <Compile Include="Pages\PokemonTypesPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

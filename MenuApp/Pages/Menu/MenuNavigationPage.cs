@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace MenuApp.Pages
+namespace MenuApp.Pages.Menu
 {
     public class MenuNavigationPage : NavigationPage
     {

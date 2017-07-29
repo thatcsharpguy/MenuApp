@@ -5,23 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace MenuApp.Pages
+namespace MenuApp.Pages.Menu
 {
     public class MainPage : MasterDetailPage
     {
         public MainPage()
         {
-            Master = new ContentPage
-            {
-                Title= "Master page",
-                Content = new StackLayout
-                {
-                    Children =
-                    {
-                        new Label{ Text = "Master page" }
-                    }
-                }
-            };
+            Master = new 
 
             Detail = new ContentPage
             {
