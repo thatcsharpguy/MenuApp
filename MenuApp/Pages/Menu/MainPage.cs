@@ -33,8 +33,20 @@ namespace MenuApp.Pages.Menu
             MenuNavigationPage page;
             var actualContentPage = (Page)Activator.CreateInstance(e.Page);
             page = new MenuNavigationPage(actualContentPage);
+            page.InitialPageAppearing += Page_InitialPageAppearing;
+            page.InitialPageDisappearing += Page_InitialPageDisappearing;
             Detail = page;
             IsPresented = false;
+        }
+
+        private void Page_InitialPageDisappearing(object sender, EventArgs e)
+        {
+            IsGestureEnabled = false;
+        }
+
+        private void Page_InitialPageAppearing(object sender, EventArgs e)
+        {
+            IsGestureEnabled = true;
         }
     }
 }
