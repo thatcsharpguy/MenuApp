@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,12 +13,25 @@ namespace MenuApp.Pages
         {
             Title = "Elite 4";
 
-            var list = new ListView {ItemTemplate = new DataTemplate(typeof(TextCell))};
-            list.ItemTemplate.SetBinding(TextCell.TextProperty, nameof(Trainer.Name));
-            list.ItemTemplate.SetBinding(TextCell.DetailProperty, nameof(Trainer.PokemonTypes));
-            list.ItemsSource = Data.EliteTrainers;
+            var trainerList = new ListView {ItemTemplate = new DataTemplate(typeof(TextCell))};
+            trainerList.ItemTemplate.SetBinding(TextCell.TextProperty, nameof(Trainer.Name));
+            trainerList.ItemTemplate.SetBinding(TextCell.DetailProperty, nameof(Trainer.PokemonTypes));
+            trainerList.ItemsSource = Data.EliteTrainers;
 
-            Content = list;
+            trainerList.ItemSelected += TrainerList_ItemSelected;
+
+            Content = trainerList;
+        }
+
+        private async void TrainerList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var trainer = e.SelectedItem as Trainer;
+            if(trainer != null)
+            {
+                ((ListView)sender).SelectedItem = null;
+                await Navigation.PushAsync(new TrainerPage(trainer));
+                ((ListView) sender).SelectedItem = null;
+            }
         }
     }
 }

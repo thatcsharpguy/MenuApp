@@ -14,7 +14,7 @@ namespace MenuApp.Pages
         {
             Title = "Tipos de pokemon";
 
-            var list = new ListView { ItemTemplate = new DataTemplate(typeof(TextCell)) };
+            var list = new ListView();
             list.ItemsSource = Data.PokemonTypes;
 
             Content = list;
