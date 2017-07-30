@@ -114,6 +114,9 @@
     <BundleResource Include="Resources\Icon-Small%402x.png" />
     <BundleResource Include="Resources\Icon-Small%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\elite%403x.png" />
+    <BundleResource Include="Resources\gym%403x.png" />
+    <BundleResource Include="Resources\types%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -135,7 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MenuApp\MenuApp.csproj">
-      <Project>{5dda2670-3942-408d-b5f0-13fea7cb3c88}</Project>
+      <Project>{66C64AF5-B094-46AB-925C-A7AA6B2FA017}</Project>
       <Name>MenuApp</Name>
     </ProjectReference>
   </ItemGroup>
