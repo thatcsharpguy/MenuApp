@@ -117,6 +117,7 @@
     <BundleResource Include="Resources\elite%403x.png" />
     <BundleResource Include="Resources\gym%403x.png" />
     <BundleResource Include="Resources\types%403x.png" />
+    <BundleResource Include="Resources\menu%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

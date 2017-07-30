@@ -16,6 +16,10 @@ namespace MenuApp.Pages.Menu
         public SideMenuPage()
         {
             Title = "Pokémon";
+            if(Device.RuntimePlatform == Device.iOS)
+            {
+                Icon = "menu.png";    
+            }
 
             var containerGrid = new Grid
             {
