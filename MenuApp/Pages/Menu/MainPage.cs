@@ -15,17 +15,12 @@ namespace MenuApp.Pages.Menu
             sideMenuPage.MenuItemSelected += SideMenuPage_MenuItemSelected;
             Master = sideMenuPage;
 
-            Detail = new ContentPage
-            {
-                Title = "Detail page",
-                Content = new StackLayout
-                {
-                    Children =
-                    {
-                        new Label{ Text = "Detail page" }
-                    }
-                }
-            };
+
+            var elite4Page = new MenuNavigationPage(new EliteFourPage());
+            elite4Page.InitialPageAppearing += Page_InitialPageAppearing;
+            elite4Page.InitialPageDisappearing += Page_InitialPageDisappearing;
+
+            Detail = elite4Page;
         }
 
         private void SideMenuPage_MenuItemSelected(object sender, Controls.MenuListItem e)
